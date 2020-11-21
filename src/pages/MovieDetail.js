@@ -34,6 +34,9 @@ const MovieDetail = () => {
               />
             ))}
           </Awards>
+          <Recomended>
+            <q>{movie.recomended}</q>
+          </Recomended>
           <ImageDisplay>
             <img src={movie.secondaryImg} alt="img" />
           </ImageDisplay>
@@ -91,6 +94,16 @@ const ImageDisplay = styled.div`
     width: 100%;
     height: 100vh;
     object-fit: cover;
+  }
+`;
+const Recomended = styled.div`
+  padding: 0rem 0rem 10rem 0rem;
+  display: flex;
+  justify-content: center;
+  q {
+    font-size: 2rem;
+    color: #cccccc;
+    font-weight: lighter;
   }
 `;
 
