@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { useHistory } from "react-router-dom";
 import { MovieState } from "../MovieState";
+//Animation
+import { motion } from "framer-motion";
+import { pageAnimation } from "../animation";
 
 const MovieDetail = () => {
   const history = useHistory();
@@ -20,7 +23,12 @@ const MovieDetail = () => {
     <>
       {/* MOVIE が存在していてばDivコンテンツをレンダリングする */}
       {movie && (
-        <Details>
+        <Details
+          exit="exit"
+          variants={pageAnimation}
+          initial="hidden"
+          animate="show"
+        >
           <Headline>
             <h2>{movie.title}</h2>
             <img src={movie.mainImg} alt="movie" />
@@ -46,7 +54,8 @@ const MovieDetail = () => {
   );
 };
 
-const Details = styled.div`
+//styled component に motion 追加するには以下のように括弧で囲う
+const Details = styled(motion.div)`
   color: white;
 `;
 
