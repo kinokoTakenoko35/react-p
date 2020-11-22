@@ -12,6 +12,7 @@ export const About = styled.div`
 export const Description = styled.div`
   flex: 1;
   padding-right: 5rem;
+  z-index: 2;
   h2 {
     font-weight: lighter;
   }
@@ -19,6 +20,7 @@ export const Description = styled.div`
 export const Image = styled.div`
   flex: 1;
   overflow: hidden;
+  z-index: 2;
   /* 子要素にスタイルを適応させる場合は、親要素の中に記述する */
   img {
     width: 100%;
