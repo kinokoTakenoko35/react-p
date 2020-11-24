@@ -8,10 +8,24 @@ import home2 from "../img/home2.png";
 //Styles
 import { About, Description, Image } from "../styles";
 import styled from "styled-components";
+import { useScroll } from "../components/useScroll";
+import { scrollReveal } from "../animation";
 
 const ServicesSection = () => {
+  {
+    /*elementにSuseScrollで取得したTrue/Falseの値が入ってくる */
+  }
+  const [element, controls] = useScroll();
+  {
+    /*Servicesセクション全体にスクロールアニメーションを適応 */
+  }
   return (
-    <Services>
+    <Services
+      variants={scrollReveal}
+      animate={controls}
+      initial="hidden"
+      ref={element}
+    >
       <Description>
         <h2>
           High <span>quality</span> services.
