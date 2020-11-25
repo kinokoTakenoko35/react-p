@@ -11,6 +11,8 @@ const GlobalStyle = createGlobalStyle`
 body{
     background-color: #1b1b1b;
     font-family: 'Inter', sans-serif;
+    /*アニメーションでスケールアップしたさいに横スクロールが生まれていたのを隠す */
+    overflow-x: hidden;
 }
 button{
     font-weight: bold;
