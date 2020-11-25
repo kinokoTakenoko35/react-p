@@ -87,3 +87,11 @@ export const scrollReveal = {
     },
   },
 };
+export const swoopAdoop = {
+  /* skew = rotate */
+  hidden: { width: "0%", transition: { duration: 0.5 } },
+  show: {
+    width: "100%",
+    transition: { ease: "easeOut", duration: 1 },
+  },
+};
