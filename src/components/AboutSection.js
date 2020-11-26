@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import home1 from "../img/home1.png";
 import { About, Description, Image, Hide } from "../styles";
 //Framer Motion
@@ -27,7 +28,9 @@ const AboutSection = () => {
           Contact us for any photography or videography ideas that you have. we
           have professional with amazing skills.
         </motion.p>
-        <motion.button variants={fade}>Contact Us</motion.button>
+        <Link to="/contact">
+          <motion.button variants={fade}>ontact Us</motion.button>
+        </Link>
       </Description>
       <Image>
         <motion.img variants={photoAnim} src={home1} alt="guy with home" />
