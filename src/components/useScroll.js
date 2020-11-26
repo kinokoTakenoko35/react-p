@@ -9,7 +9,7 @@ export const useScroll = () => {
   {
     /* threshold=0.5スクロールした際に true/false値を取得 */
   }
-  const [element, view] = useInView({ threshold: 0.5 });
+  const [element, view] = useInView({ threshold: 0.3 });
   if (view) {
     controls.start("show");
   } else {
